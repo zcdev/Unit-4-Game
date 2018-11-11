@@ -53,19 +53,17 @@ $(document).ready(function () {
         while (allEggNumbers.length < 4) {
             var eggNumber = Math.floor(Math.random() * 12) + 1;
             if (!allEggNumbers.includes(eggNumber) ) {
+                if (parseInt($(".egg").val()) !== eggNumber){
                 allEggNumbers.push(eggNumber);
+                }
             }
-        }
-
+        
         // Assign each unique egg number to its value
         $(".egg").each(function (index) {
-            if ($(this).val() !== eggNumber){
             $(this).val(allEggNumbers[index]);
-            } else {
-                eggNumber = Math.floor(Math.random() * 12) + 1;
-            }
             $("#computer-pick").text(computerPick);
         });
+    }
     }
 
 });
