@@ -107,4 +107,7 @@ button, .btn {
         min-width: 70px;
         max-width: 70px;
     }
+    #grass {
+        position: relative;
+    }
 }
