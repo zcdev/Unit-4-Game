@@ -54,7 +54,7 @@ $(document).ready(function () {
         while (allEggNumbers.length < 4) {
             i++;
             var eggNumber = Math.floor(Math.random() * 12) + 1;
-            if (eggNumber !== $("egg").eq(i).val()) {
+            if (eggNumber !== $(".egg").eq(i).val()) {
             if (!allEggNumbers.includes(eggNumber) ) {
                 allEggNumbers.push(eggNumber);
             }
