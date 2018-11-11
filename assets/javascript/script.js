@@ -50,20 +50,20 @@ $(document).ready(function () {
         totalScore = 0;
 
         // Generate each egg number
-        var i = 0;
         while (allEggNumbers.length < 4) {
-            i++;
             var eggNumber = Math.floor(Math.random() * 12) + 1;
-            if (eggNumber !== $(".egg").eq(i).val()) {
             if (!allEggNumbers.includes(eggNumber) ) {
                 allEggNumbers.push(eggNumber);
             }
         }
-        }
 
-        // Assign each egg number to its value
+        // Assign each unique egg number to its value
         $(".egg").each(function (index) {
+            if ($(this).val() !== eggNumber){
             $(this).val(allEggNumbers[index]);
+            } else {
+                eggNumber = Math.floor(Math.random() * 12) + 1;
+            }
             $("#computer-pick").text(computerPick);
         });
     }
