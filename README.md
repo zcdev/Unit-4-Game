@@ -9,5 +9,5 @@ In this assignment, we create another fun and interactive game for web browsers.
 * jQuery
 * Bootstrap
 
-Game Theme and UI Designed by ZCDEV. Image assets from vecteezy.com
+Game theme and UI designed by ZCDEV. Image assets from vecteezy.com
 
