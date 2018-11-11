@@ -91,11 +91,11 @@ button.close {
 
 @media screen and (max-width: 768px) {
     h1 {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 
     h3 {
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 
     .egg img {
@@ -114,11 +114,11 @@ button.close {
 
 @media screen and (max-width: 414px) {
     h1 {
-        font-size: 22px;
+        font-size: 1.375rem;
     }
 
     h3 {
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 
     .egg img {
