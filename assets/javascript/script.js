@@ -49,7 +49,7 @@ $(document).ready(function () {
         allEggNumbers = [];
         totalScore = 0;
 
-        // Generate each egg number
+        // Generate each unique egg number
         while (allEggNumbers.length < 4) {
             var eggNumber = Math.floor(Math.random() * 12) + 1;
             if (!allEggNumbers.includes(eggNumber) ) {
