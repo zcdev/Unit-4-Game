@@ -1,0 +1,47 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background: #daf0f1;
+}
+
+h1 {
+    font-weight: 700;
+    color: #F6A1AD;
+}
+
+.jumbotron {
+    background-color: #ffffff;
+    padding: 2rem;
+}
+
+.card-header, .card-footer, button {
+    background-color: rgba(0,0,0,0);
+}
+
+.btn:focus {
+    box-shadow: 0 0 0 0.2rem rgba(246,161,173,1);
+}
+
+.egg img {
+    transition: all .2s ease-in-out;
+    width: 100px;
+}
+
+.egg img:hover {
+    transform: scale(1.1);
+}
+
+.animate {
+    animation: glow .5s infinite alternate;
+    
+}
+
+.box {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+@keyframes glow {
+    to {
+        text-shadow: 0 0 10px rgb(246, 124, 140);
+    }
+}

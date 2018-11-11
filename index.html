@@ -1,0 +1,77 @@
+<!-- ** Pseudo Code **
+Computer generates a random number.
+User starts with the total score of zero.
+There are 4 crystal stones storing individual values.
+If user click on each of them, they will add value to the user's total score.
+If the user's total score is equal to the computer's random number, the user wins.
+If the user's total score is not equal to the computer's random number, the user loses.
+The game will restart when player wins or loses.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    <title>Easter Eggs Festival</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-7">
+                <h1 class="text-center">Easter Eggs Festival</h1>
+                <h3 class="text-center">Every egg has a hidden value.<br>Select them and see if you can match the total value!</h3>
+            </div>
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Total Value:</h3>
+                                <h1 id="computer-pick"></h1>
+                                <h4 class="text-center" id="status"></h4>
+                            </div>
+                            <div class="col-md-6">
+                                <h1>Wins: <span id="wins">0</span></h1>
+                                <h1>Losses: <span id="losses">0</span></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mb-2">
+                    <h3 class="card-header text-center">Your Eggs:</h3>
+                    <div class="card-body box text-center">
+                        <button id="egg-1" class="egg btn">
+                            <img src="assets/images/egg1.png">
+                        </button>
+                        <button id="egg-2" class="egg btn">
+                            <img src="assets/images/egg2.png">
+                        </button>
+                        <button id="egg-3" class="egg btn">
+                            <img src="assets/images/egg3.png">
+                        </button>
+                        <button id="egg-4" class="egg btn">
+                            <img src="assets/images/egg4.png">
+                        </button>
+                    </div>
+                    <h3 class="card-footer text-center">Eggs Value: <span id="total-score">0</span></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="assets/images/grass.png" class="img-fluid">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/javascript/script.js"></script>
+</body>
+</html>
