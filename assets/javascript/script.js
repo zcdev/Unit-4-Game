@@ -7,6 +7,7 @@ $(document).ready(function () {
     var losses = 0;
     var allEggNumbers = [];
     var ding = new Audio('assets/dingding.mp3');
+    
     // Generate each egg number
     while (allEggNumbers.length < 4) {
         var eggNumber = Math.floor(Math.random() * 12) + 1;
