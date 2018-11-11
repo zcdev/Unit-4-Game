@@ -6,7 +6,8 @@ $(document).ready(function () {
     var wins = 0;
     var losses = 0;
     var allEggNumbers = [];
-    var ding = new Audio('assets/dingding.mp3');
+    var ding = new Audio('assets/sounds/ding.mp3');
+    var down = new Audio('assets/sounds/down.mp3');
 
     // Starting the game
     resetGame();
@@ -26,8 +27,9 @@ $(document).ready(function () {
             ding.play();
             $('#popMessage').modal('show');
             $("#status").text("Yay, you won!!!");
-            if (!$("#status").hasClass("animate")) {
-                $("#status").addClass("animate");
+            if (!$("#status").hasClass("animate-won")) {
+                $("#status").removeClass("animate-lost");
+                $("#status").addClass("animate-won");
             }
             resetGame();
 
@@ -35,8 +37,13 @@ $(document).ready(function () {
         } else if (totalScore > computerPick) {
             losses++;
             $("#losses").text(losses);
+            down.play();
             $('#popMessage').modal('show');
             $("#status").text("Uh-oh, you lost!!!");
+            if (!$("#status").hasClass("animate-lost")) {
+                $("#status").removeClass("animate-won");
+                $("#status").addClass("animate-lost");
+            }
             resetGame();
         }
     });

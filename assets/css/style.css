@@ -44,10 +44,14 @@ h1 {
     transform: scale(1.1);
 }
 
-.animate {
-    animation: glow .5s infinite alternate;
-    
+.animate-won {
+    animation: glow-red .5s infinite alternate;
 }
+
+.animate-lost {
+    animation: glow-blue .5s infinite alternate;
+}
+
 
 button, .btn {
     width: 120px;
@@ -73,9 +77,15 @@ button.close {
     margin: 0;
 }
 
-@keyframes glow {
+@keyframes glow-red {
     to {
         text-shadow: 0 0 10px rgb(246, 124, 140);
+    }
+}
+
+@keyframes glow-blue {
+    to {
+        text-shadow: 0 0 10px rgb(146, 214, 227);
     }
 }
 
