@@ -31,7 +31,7 @@ $(document).ready(function () {
             $("#status").addClass("animate-won");
             resetGame();
 
-            // If total egg number is greater than computer's picked number
+        // If total egg number is greater than computer's picked number
         } else if (totalScore > computerPick) {
             losses++;
             $("#losses").text(losses);
