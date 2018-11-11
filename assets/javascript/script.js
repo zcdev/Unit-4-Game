@@ -1,13 +1,13 @@
 $(document).ready(function () {
 
     // Declare and assign variables
-    var computerPick = Math.floor(Math.random() * 120) + 19;
+    var computerPick = Math.floor(Math.random() * 120 - 19 + 1) + 19;
     var totalScore = 0;
     var wins = 0;
     var losses = 0;
     var allEggNumbers = [];
     var ding = new Audio('assets/dingding.mp3');
-    
+
     // Generate each egg number
     while (allEggNumbers.length < 4) {
         var eggNumber = Math.floor(Math.random() * 12) + 1;
