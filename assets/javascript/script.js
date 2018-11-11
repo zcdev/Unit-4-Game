@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     // Declare and assign variables
-    var computerPick = computerPick = Math.floor(Math.random() * (120 - 19)) + 19;
+    var computerPick = Math.floor(19 + Math.random() * (120 + 1 - 19));
     var totalScore = 0;
     var wins = 0;
     var losses = 0;
@@ -44,17 +44,21 @@ $(document).ready(function () {
     // Reset the game
     function resetGame() {
         $("#computer-pick").empty();
-        computerPick = Math.floor(Math.random() * (120 - 19)) + 19;
+        computerPick = Math.floor(19 + Math.random() * (120 + 1 - 19));
         $("#computer-pick").text(computerPick);
         allEggNumbers = [];
         totalScore = 0;
 
         // Generate each egg number
+        var i = 0;
         while (allEggNumbers.length < 4) {
+            i++;
             var eggNumber = Math.floor(Math.random() * 12) + 1;
-            if (!allEggNumbers.includes(eggNumber)) {
+            if (eggNumber !== $("egg").eq(i).val()) {
+            if (!allEggNumbers.includes(eggNumber) ) {
                 allEggNumbers.push(eggNumber);
             }
+        }
         }
 
         // Assign each egg number to its value
