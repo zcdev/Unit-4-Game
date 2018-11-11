@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    // Declare and assign letiables
+    // Declare and assign variables
     let computerPick = Math.floor(19 + Math.random() * (120 + 1 - 19));
     let totalScore = 0;
     let wins = 0;
