@@ -60,6 +60,18 @@ button, .btn {
     z-index: -1;
 }
 
+button.close { 
+    outline: none;
+}
+
+.modal-body {
+    margin: 2rem 0 2rem 2rem;
+}
+
+.modal-body h4 {
+    margin: 0;
+}
+
 @keyframes glow {
     to {
         text-shadow: 0 0 10px rgb(246, 124, 140);

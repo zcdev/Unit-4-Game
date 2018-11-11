@@ -7,7 +7,6 @@ $(document).ready(function () {
     var losses = 0;
     var allEggNumbers = [];
     var ding = new Audio('assets/dingding.mp3');
-    
     // Generate each egg number
     while (allEggNumbers.length < 4) {
         var eggNumber = Math.floor(Math.random() * 12) + 1;
@@ -35,6 +34,7 @@ $(document).ready(function () {
             wins++;
             $("#wins").text(wins);
             ding.play();
+            $('#popMessage').modal('show');
             $("#status").text("Ya, you won!!!");
             if (!$("#status").hasClass("animate")){
                 $("#status").addClass("animate");
@@ -45,6 +45,7 @@ $(document).ready(function () {
         } else if (totalScore > computerPick) {
             losses++;
             $("#losses").text(losses);
+            $('#popMessage').modal('show');
             $("#status").text("Uh-oh, you lost!!!");
             resetGame();
         }
