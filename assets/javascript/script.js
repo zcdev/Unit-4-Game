@@ -11,7 +11,7 @@ $(document).ready(function () {
     // Starting the game
     resetGame();
 
-    // When player clicks, computer display its picked number and compare against total egg numbers
+    // When player clicks the egg, computer display its picked number and compare against total egg numbers
     $(".egg").on("click", function () {
         $("#computer-pick").text(computerPick);
         var eggValue = $(this).val();
@@ -52,18 +52,18 @@ $(document).ready(function () {
         // Generate each unique egg number
         while (allEggNumbers.length < 4) {
             var eggNumber = Math.floor(Math.random() * 12) + 1;
-            if (!allEggNumbers.includes(eggNumber) ) {
-                if (parseInt($(".egg").val()) !== eggNumber){
-                allEggNumbers.push(eggNumber);
+            if (!allEggNumbers.includes(eggNumber)) {
+                if (parseInt($(".egg").val()) !== eggNumber) {
+                    allEggNumbers.push(eggNumber);
                 }
             }
-        
-        // Assign each unique egg number to its value
-        $(".egg").each(function (index) {
-            $(this).val(allEggNumbers[index]);
-            $("#computer-pick").text(computerPick);
-        });
-    }
+
+            // Assign each unique egg number to its value
+            $(".egg").each(function (index) {
+                $(this).val(allEggNumbers[index]);
+                $("#computer-pick").text(computerPick);
+            });
+        }
     }
 
 });
