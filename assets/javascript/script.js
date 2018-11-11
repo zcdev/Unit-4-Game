@@ -1,26 +1,15 @@
 $(document).ready(function () {
 
     // Declare and assign variables
-    var computerPick = Math.floor(19 + Math.random()*(120 + 1 - 19))
+    var computerPick = Math.floor(19 + Math.random() * (120 + 1 - 19))
     var totalScore = 0;
     var wins = 0;
     var losses = 0;
     var allEggNumbers = [];
     var ding = new Audio('assets/dingding.mp3');
 
-    // Generate each egg number
-    while (allEggNumbers.length < 4) {
-        var eggNumber = Math.floor(Math.random() * 12) + 1;
-        if (!allEggNumbers.includes(eggNumber)) {
-            allEggNumbers.push(eggNumber);
-        }
-    }
-    
-    // Assign each egg number to its value
-    $(".egg").each(function (index) {
-        $(this).val(allEggNumbers[index]);
-        $("#computer-pick").text(computerPick);
-    });
+    // Starting the game
+    resetGame();
 
     // When player clicks, computer display its picked number and compare against total egg numbers
     $(".egg").on("click", function () {
@@ -36,13 +25,13 @@ $(document).ready(function () {
             $("#wins").text(wins);
             ding.play();
             $('#popMessage').modal('show');
-            $("#status").text("Ya, you won!!!");
-            if (!$("#status").hasClass("animate")){
+            $("#status").text("Yay, you won!!!");
+            if (!$("#status").hasClass("animate")) {
                 $("#status").addClass("animate");
             }
             resetGame();
 
-        // If total egg number is greater than computer's picked number
+            // If total egg number is greater than computer's picked number
         } else if (totalScore > computerPick) {
             losses++;
             $("#losses").text(losses);
@@ -51,7 +40,7 @@ $(document).ready(function () {
             resetGame();
         }
     });
-    
+
     // Reset the game
     function resetGame() {
         $("#computer-pick").empty();
@@ -59,6 +48,20 @@ $(document).ready(function () {
         $("#computer-pick").text(computerPick);
         allEggNumbers = [];
         totalScore = 0;
+
+        // Generate each egg number
+        while (allEggNumbers.length < 4) {
+            var eggNumber = Math.floor(Math.random() * 12) + 1;
+            if (!allEggNumbers.includes(eggNumber)) {
+                allEggNumbers.push(eggNumber);
+            }
+        }
+
+        // Assign each egg number to its value
+        $(".egg").each(function (index) {
+            $(this).val(allEggNumbers[index]);
+            $("#computer-pick").text(computerPick);
+        });
     }
 
 });
