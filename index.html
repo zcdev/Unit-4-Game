@@ -12,8 +12,7 @@ The game will restart when player wins or loses.
 
 <head>
     <meta charset="UTF-8">
-        <meta http-equiv="cache-control" content="no-cache">
-    <meta http-equiv="pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easter Eggs Festival</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
@@ -21,6 +20,7 @@ The game will restart when player wins or loses.
 </head>
 
 <body>
+    <div class="wrapper">
     <div class="jumbotron">
         <div class="row">
             <div class="col-md-7">
@@ -31,12 +31,12 @@ The game will restart when player wins or loses.
                 <div class="card">
                     <div class="card-body text-center">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-xs-12">
                                 <h3>Total Value:</h3>
                                 <h1 id="computer-pick"></h1>
                                 <h4 class="text-center" id="status"></h4>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-xs-12">
                                 <h1>Wins: <span id="wins">0</span></h1>
                                 <h1>Losses: <span id="losses">0</span></h1>
                             </div>
@@ -70,7 +70,10 @@ The game will restart when player wins or loses.
             </div>
         </div>
     </div>
-    <img src="assets/images/grass.png" class="img-fluid">
+    <div class="d-flex justify-content-center">
+    <img src="assets/images/grass.png" class="img-fluid" id="grass">
+    </div>
+</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/javascript/script.js"></script>
 </body>
