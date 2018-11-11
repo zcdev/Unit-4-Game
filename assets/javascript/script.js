@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     // Declare and assign variables
-    var computerPick = Math.floor(Math.random() * 120 - 19 + 1) + 19;
+    var computerPick = Math.floor(19 + Math.random()*(120 + 1 - 19))
     var totalScore = 0;
     var wins = 0;
     var losses = 0;
