@@ -1,13 +1,13 @@
 $(document).ready(function () {
 
-    // Declare and assign variables
-    var computerPick = Math.floor(19 + Math.random() * (120 + 1 - 19));
-    var totalScore = 0;
-    var wins = 0;
-    var losses = 0;
-    var allEggNumbers = [];
-    var ding = new Audio('assets/sounds/ding.mp3');
-    var down = new Audio('assets/sounds/down.mp3');
+    // Declare and assign letiables
+    let computerPick = Math.floor(19 + Math.random() * (120 + 1 - 19));
+    let totalScore = 0;
+    let wins = 0;
+    let losses = 0;
+    let allEggNumbers = [];
+    const ding = new Audio('assets/sounds/ding.mp3');
+    const down = new Audio('assets/sounds/down.mp3');
 
     // Starting the game
     resetGame();
@@ -15,7 +15,7 @@ $(document).ready(function () {
     // When player clicks the egg, computer display its picked number and compare against total egg numbers
     $(".egg").on("click", function () {
         $("#computer-pick").text(computerPick);
-        var eggValue = $(this).val();
+        let eggValue = $(this).val();
         totalScore += parseInt(eggValue);
         $("#total-score").text(totalScore);
         $("#status").removeClass("animate");
@@ -27,10 +27,8 @@ $(document).ready(function () {
             ding.play();
             $('#popMessage').modal('show');
             $("#status").text("Yay, you won!!!");
-            if (!$("#status").hasClass("animate-won")) {
-                $("#status").removeClass("animate-lost");
-                $("#status").addClass("animate-won");
-            }
+            $("#status").removeClass("animate-lost");
+            $("#status").addClass("animate-won");
             resetGame();
 
             // If total egg number is greater than computer's picked number
@@ -40,10 +38,8 @@ $(document).ready(function () {
             down.play();
             $('#popMessage').modal('show');
             $("#status").text("Uh-oh, you lost!!!");
-            if (!$("#status").hasClass("animate-lost")) {
-                $("#status").removeClass("animate-won");
-                $("#status").addClass("animate-lost");
-            }
+            $("#status").removeClass("animate-won");
+            $("#status").addClass("animate-lost");
             resetGame();
         }
     });
@@ -58,15 +54,15 @@ $(document).ready(function () {
 
         // Generate each unique egg number
         while (allEggNumbers.length < 4) {
-            var eggNumber = Math.floor(Math.random() * 12) + 1;
+            let eggNumber = Math.floor(Math.random() * 12) + 1;
             if (!allEggNumbers.includes(eggNumber)) {
-                if (parseInt($(".egg").val()) !== eggNumber) {
+                if (Number.parseInt($(".egg").val()) !== eggNumber) {
                     allEggNumbers.push(eggNumber);
                 }
             }
 
             // Assign each unique egg number to its value
-            $(".egg").each(function (index) {
+            $(".egg").each(function(index) {
                 $(this).val(allEggNumbers[index]);
                 $("#computer-pick").text(computerPick);
             });
