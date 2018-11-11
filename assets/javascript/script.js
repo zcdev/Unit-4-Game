@@ -22,9 +22,9 @@ $(document).ready(function () {
 
         // If total egg number is equal to computer's picked number
         if (totalScore === computerPick) {
+            ding.play();
             wins++;
             $("#wins").text(wins);
-            ding.play();
             $('#popMessage').modal('show');
             $("#status").text("Yay, you won!!!");
             $("#status").removeClass("animate-lost");
@@ -33,9 +33,9 @@ $(document).ready(function () {
 
         // If total egg number is greater than computer's picked number
         } else if (totalScore > computerPick) {
+            down.play();
             losses++;
             $("#losses").text(losses);
-            down.play();
             $('#popMessage').modal('show');
             $("#status").text("Uh-oh, you lost!!!");
             $("#status").removeClass("animate-won");
