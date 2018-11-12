@@ -4,7 +4,7 @@
 
 In this assignment, we create another fun and interactive game for web browsers. This time, the app must dynamically update the HTML pages with the jQuery library.
 
-### Technologies Used
+### Technologies
 
 * HTML5
 * CSS3
