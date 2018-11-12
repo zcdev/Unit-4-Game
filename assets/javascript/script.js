@@ -18,7 +18,6 @@ $(document).ready(function () {
         let eggValue = $(this).val();
         totalScore += Number.parseInt(eggValue);
         $("#total-score").text(totalScore);
-        $("#status").removeClass("animate");
 
         // If total egg number is equal to computer's picked number
         if (totalScore === computerPick) {
