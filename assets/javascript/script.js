@@ -16,7 +16,7 @@ $(document).ready(function () {
     $(".egg").on("click", function () {
         $("#computer-pick").text(computerPick);
         let eggValue = $(this).val();
-        totalScore += parseInt(eggValue);
+        totalScore += Number.parseInt(eggValue);
         $("#total-score").text(totalScore);
         $("#status").removeClass("animate");
 
