@@ -13,7 +13,7 @@ In this assignment, we create another fun and interactive game for web browsers.
 
 ### Attributions
 
-* Game theme and UI design: ZCDEV. 
+* Game theme, development, and UI design: ZCDEV. 
 * Image assets: vecteezy.com.
 * Sound clips: freesfx.co.uk.
 
