@@ -2,7 +2,7 @@
 
 ### Overview
 
-In this assignment, we were asked to create another fun and interactive game for web browsers. This time, the app must dynamically update the HTML pages with the jQuery library.
+In this project, I created another fun and interactive game for web browsers. This time, the app dynamically updated the HTML pages with the jQuery library.
 
 ### Technologies
 
@@ -17,3 +17,4 @@ In this assignment, we were asked to create another fun and interactive game for
 * Image assets: vecteezy.com.
 * Sound clips: freesfx.co.uk.
 
+![Easter Egg Festival](https://zcdev.github.io/img/p5.png)
